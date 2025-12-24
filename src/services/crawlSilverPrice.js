@@ -183,6 +183,13 @@ async function crawlSilverPrice() {
     cache.timestamp = Date.now();
 
     console.log("Successfully crawled silver price:", result);
+    //Send POST to https://ntfy.sh
+    await axios.post("https://ntfy.sh/bang-gia-0909", JSON.stringify(result), {
+      headers: {
+        Title: "💰 Giá bạc",
+        Message: JSON.stringify(result)
+      }
+    });
     return result;
   } catch (error) {
     console.error("Error crawling silver price:", error.message);
