@@ -1,0 +1,19 @@
+{
+  "name": "gia-bac",
+  "version": "1.0.0",
+  "description": "Node.js backend to crawl silver prices from giabac.vn",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": ["silver", "price", "crawler", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
+
