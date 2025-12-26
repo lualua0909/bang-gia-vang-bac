@@ -1,5 +1,6 @@
 const express = require('express');
 const silverRoutes = require('./routes/silver');
+const goldRoutes = require('./routes/gold');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api', silverRoutes);
+app.use('/api', goldRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -25,10 +27,11 @@ app.get('/health', (req, res) => {
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({
-    message: 'Silver Price API',
+    message: 'Price API',
     endpoints: {
       health: '/health',
-      silverPrice: '/api/silver-price'
+      silverPrice: '/api/silver-price',
+      goldPrice: '/api/gold-price'
     }
   });
 });
