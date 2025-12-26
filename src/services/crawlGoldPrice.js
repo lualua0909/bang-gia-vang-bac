@@ -74,7 +74,7 @@ async function crawlGoldPrice() {
     // Send to ntfy
     try {
         await axios.post(
-          "https://ntfy.sh/bang-gia-0909?Title=Gi%C3%A1+v%C3%A0ng+999+Mi+H%E1%BB%93ng",
+          "https://ntfy.sh/gia-vang-0909?Title=Gi%C3%A1+v%C3%A0ng+999+Mi+H%E1%BB%93ng",
           result
         );
     } catch (e) {

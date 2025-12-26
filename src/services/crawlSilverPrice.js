@@ -185,7 +185,7 @@ async function crawlSilverPrice() {
     console.log("Successfully crawled silver price:", result);
     //Send POST to https://ntfy.sh
     await axios.post(
-      "https://ntfy.sh/bang-gia-0909?Title=Gi%C3%A1+b%E1%BA%A1c+hi%E1%BB%87n+t%E1%BA%A1i",
+      "https://ntfy.sh/gia-bac-0909?Title=Gi%C3%A1+b%E1%BA%A1c+hi%E1%BB%87n+t%E1%BA%A1i",
       result
     );
     return result;
